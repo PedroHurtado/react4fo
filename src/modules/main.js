@@ -1,0 +1,5 @@
+import * as op from './operation.js'
+import {sum} from './operation.js'
+import {foo} from './singleton.js'
+import './run.js'
+import './pages/menu.js'
