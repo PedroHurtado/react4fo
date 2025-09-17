@@ -7,11 +7,19 @@ function* getDays(){
 function Calendar(){
     
     const days = [...getDays()]
+    function handlerClick(ev){
+        const {nativeEvent} = ev
+        const node = nativeEvent.composedPath().find(n=>n.dataset && 'day' in n.dataset)
+        if(node){
+            const {day} = node.dataset
+            console.log(day)
+        }
+    }
     return (
-        <div className='calendar'>
+        <div className='calendar' onClick={handlerClick}>
             {
                 days.map(day=>{
-                    return <div className='day' key={day}>{day}</div>
+                    return <div data-day={day} className='day' key={day}>{day}</div>
                 })
             }
         </div>
