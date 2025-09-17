@@ -1,5 +1,6 @@
 
 import Binding from "./templates/Binding"
+import Calendar from "./calendar/Calendar"
 function App() {
   return (  
       /*
@@ -8,6 +9,7 @@ function App() {
       <>
         <div>Hello World</div>
         <Binding/>          
+        <Calendar/>
       </>  
   )
 }
