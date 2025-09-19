@@ -1,5 +1,5 @@
 import PizzaList from "./PizzaList";
-import Carrito from "./Carrito";
+import Carrito from "./carrito/Carrito";
 
 export default function PizzaLayout(){
     return(
