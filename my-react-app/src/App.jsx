@@ -1,15 +1,15 @@
 
-import Binding from "./templates/Binding"
-import Calendar from "./calendar/Calendar"
+//import Binding from "./templates/Binding"
+//import Calendar from "./calendar/Calendar"
+//import Carrito from "./pizzas/Carrito"
+import PizzaLayout from "./pizzas/PizzaLayout"
 function App() {
   return (  
       /*
        *Fragment no aceptan eventos ni estilos 
        */
-      <>
-        <div>Hello World</div>
-        <Binding/>          
-        <Calendar/>
+      <>        
+        <PizzaLayout/>
       </>  
   )
 }
