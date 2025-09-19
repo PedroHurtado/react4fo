@@ -4,6 +4,7 @@
 //import Carrito from "./pizzas/Carrito"
 import PizzaLayout from "./pizzas/PizzaLayout"
 import Timer from "./timer/Timer"
+import User from "./form/User"
 function App() {
   return (  
       /*
@@ -11,6 +12,7 @@ function App() {
        */
       <>    
         <Timer/>    
+        <User/>
         <PizzaLayout/>
       </>  
   )
