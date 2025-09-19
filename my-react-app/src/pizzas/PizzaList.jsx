@@ -1,5 +1,6 @@
 import PizzaItem from "./PizzaItem"
-import {events,sendEvent} from '../util'
+import {events,/*sendEvent*/} from '../util'
+import pubsub from '../pubsub'
 
 
 export default function PizzaList(){
@@ -11,7 +12,9 @@ export default function PizzaList(){
         ev.stopPropagation()
         const {pizzaId} = ev.target?.dataset || {}       
         const pizza = pizzas.find(p=>p.id === Number(pizzaId))
-        sendEvent(events.CARRITO,ev.target,pizza && {...pizza})
+        //sendEvent(events.CARRITO,ev.target,pizza && {...pizza})
+       
+        pizza && pubsub.emit(events.CARRITO,{...pizza})
         
     }
     return(
