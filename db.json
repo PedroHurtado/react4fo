@@ -1,9 +1,15 @@
 {
-   "users":[
-   ],
-   "pizzas": [
-        {"id":1,"name":"Carbonara", "price":12},
-        {"id":2,"name":"Meditarraneo", "price":15}
-    ] 
-   
+    "users": [],
+    "pizzas": [
+        {
+            "id": "1",
+            "name": "Carbonara",
+            "price": 12
+        },
+        {
+            "id": "2",
+            "name": "Meditarraneo",
+            "price": 15.25
+        }
+    ]
 }
