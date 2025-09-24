@@ -5,15 +5,14 @@
 import PizzaLayout from "./pizzas/PizzaLayout"
 import Timer from "./timer/Timer"
 import User from "./form/User"
+import AppSuspense from "./suspense/component"
 function App() {
   return (  
       /*
        *Fragment no aceptan eventos ni estilos 
        */
       <>    
-        <Timer/>    
-        <User/>
-        <PizzaLayout/>
+        <AppSuspense/>        
       </>  
   )
 }

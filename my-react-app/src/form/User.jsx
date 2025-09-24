@@ -10,7 +10,7 @@ export default function User() {
   const name = useRef();
   const phone = useRef();
 
-  function onSubmit(ev) {
+  async function onSubmit(ev) {
     ev.stopPropagation();
     ev.preventDefault();
 

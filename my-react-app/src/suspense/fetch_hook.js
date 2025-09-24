@@ -15,10 +15,12 @@ const fetchCache = new Map();
 export const useFetch = (url, options = {}) => {
   const optionsRef = useRef(options);
   
+
+  //[JSON.stringify(options)]
   // Actualizamos las opciones solo si han cambiado
   useEffect(() => {
     optionsRef.current = options;
-  }, [JSON.stringify(options)]);
+  });
 
   // Efecto que se ejecuta cuando cambia la URL
   useEffect(() => {

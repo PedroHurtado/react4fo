@@ -1,5 +1,5 @@
 import React, { Suspense, useState } from 'react';
-import { useFetch, clearFetchCache } from './useFetch';
+import { useFetch, clearFetchCache } from './fetch_hook';
 
 // Error Boundary para capturar errores
 class ErrorBoundary extends React.Component {
@@ -20,7 +20,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <div style={{ padding: '20px', border: '2px solid red', borderRadius: '8px', margin: '10px' }}>
-          <h3>❌ Error en la carga de datos</h3>
+          <h3>Error en la carga de datos</h3>
           <p><strong>Error:</strong> {this.state.error?.message}</p>
           <button onClick={() => this.setState({ hasError: false, error: null })}>
             Reintentar
@@ -56,7 +56,7 @@ const ErrorComponent = () => {
 };
 
 // Componente principal
-const App = () => {
+const AppSuspense = () => {
   const [userId, setUserId] = useState(1);
   const [showError, setShowError] = useState(false);
 
@@ -127,4 +127,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AppSuspense;
