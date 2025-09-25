@@ -13,7 +13,8 @@ export default function Layout() {
       <Suspense>
         <Routes>
           <Route path="page1" element={<Page1 />} />
-          <Route path="page1" element={<Page2 />} />
+          <Route path="page2" element={<Page2 />} />
+          <Route path="page3" element={<Page3 />} />
         </Routes>
       </Suspense>
     </div>
